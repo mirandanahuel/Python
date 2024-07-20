@@ -1,7 +1,7 @@
 class alumnos:
-
+     tipo="primer año"
      def aula_primer_año(self,fecha_de_incricion,nombre,apellido,edad,año_nacimiento,dni,direccion,email,nacionalidad,telefono):
-        cantidad=int(input("ingrese lafecha_de_incricion cantidad de alumnos para incribir  :"))
+        cantidad=int(input("ingrese la cantidad de alumnos para incribir  :"))
         for i in range(cantidad+1):
             self.fecha_de_incricion=int(input ("ingrese , fecha"))
             self.nombre=input (f"ingrese ,nombre")
@@ -13,4 +13,5 @@ class alumnos:
             self.email=int (input (f"ingrese , email"))
             self.nacionalidad=input (f"ingrese , nacionalidad")
             self.telefono=int (input (f"ingrese,telefono"))
+             
 print (self.nombre)
