@@ -1,15 +1,20 @@
-funcion:modificar datos
+#funcion:modificar datos
 def modificar(nombre,apellido,edad,fecha,dni,direccion,email,telefono):
 	print("bienvenido modificar")
 	print("'------------------------------------")
 	buscar=input("buscar nombre")
+#requiere un for para buscar nombre
 	if buscar==nombre[0]:
 		nombre.append(input("modificar"))
+		while nombre=="":
+			nombre.append(input("nombre"))
 	if apellido[0]==nombre[0]:
 		print("quiere modificar apellido")
 		buscar=input("si o no :")
 		if buscar=="si":
 			apellido.append(input("apellido:"))
+			while apellido=="":
+				apellido.append(input("apellido"))
 			print("se modifico ")
 		else:
 			print("no se encotro resultado")
@@ -18,21 +23,29 @@ def modificar(nombre,apellido,edad,fecha,dni,direccion,email,telefono):
 	  	buscar=input("si o no :")
 	  	if buscar=="si":
 	  		edad.append(input("edad :"))
+	  		while edad=="":
+	  			edad.append(input("edad"))
 	  	else:
 	  		print("no se encotro resultado")
 	print("gracias por elegirnos")			
 #funcion: lista de datos
 def lista(nombre,apellido,edad,fecha,dni,direccion,email,telefono):
 	print("bienvenido a lista")
+	i=0
+	cantidad=int(input("ingrese cantidad"))
+	for i in range(cantidad):
+		print(nombre[i])
+		print(apellido[i])
+		print(edad[i])
+		print(fecha[i])
+		print(dni[i])
+		print(direccion[i])
+		print(email[i])
+		print(telefono[i])
+
+		
 	#requiere un for para recorrer lista
-	print(nombre[0])
-	print(apellido[0])
-	print(edad[0])
-	print(fecha[0])
-	print(dni[0])
-	print(direccion[0])
-	print(email[0])
-	print(telefono[0])
+	
 #funcion :baja de datos
 def baja(nombre,apellido,edad,fecha,dni,direccion,email,telefono):
 	print("bienvenido baja")
@@ -57,31 +70,33 @@ def alta(nombre,apellido,edad,fecha,dni,direccion,email,telefono):
 	print("bienvenido alta")	
 	print("--------------------------")
 	print("ingrese los datos ")
-#requiere un for para almacenar x datos
-	nombre.append(input("nombre :"))
-	while nombre=="":
-		nombre.append(input("nombre"))
-	apellido.append(input("apellido :"))
-	while apellido=="":
-		apellido.append(input("apellido"))
-	edad.append(input("edad :"))
-	while edad=="":
-		edad.append(input("edad"))	
-	fecha.append(input("año, nacio:"))
-	while fecha=="":
-		fecha.append(input("año,nacio"))
-	dni.append(input("dni:"))
-	while dni=="":
-		dni.append(input("dni"))
-	direccion.append(input("direccion:"))
-	while direccion=="":
-		direccion.append(input("direccion"))
-	email.append(input("email:"))
-	while email=="":
-		email.append(input("email"))
-	telefono.append(input("telefono"))
-	while telefono=="":
+	i=0
+	cantidad=int(input("ingrese cantidad"))
+	for i in range(cantidad):
+		nombre.append(input("nombre :"))
+		while nombre=="":
+			nombre.append(input("nombre"))
+		apellido.append(input("apellido :"))
+		while apellido=="":
+			apellido.append(input("apellido"))
+		edad.append(input("edad :"))
+		while edad=="":
+			edad.append(input("edad"))
+		fecha.append(input("año,nacio:"))
+		while fecha=="":
+			fecha.append(input("año,nacio"))
+		dni.append(input("dni:"))
+		while dni=="":
+			dni.append(input("dni"))
+		direccion.append(input("direccion:"))
+		while direccion=="":
+			direccion.append(input("direccion"))
+		email.append(input("email:"))
+		while email=="":
+			email.append(input("email"))
 		telefono.append(input("telefono"))
+		while telefono=="":
+			telefono.append(input("telefono"))
 		
 #funcio:menu
 def menu():
